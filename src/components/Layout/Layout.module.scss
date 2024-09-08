@@ -1,7 +1,7 @@
 @import '@/scss/utils';
 
 .layout {
-  height: 100vh;
+  min-height: 100vh;
 
   @include mobile {
     padding: 0 16px;

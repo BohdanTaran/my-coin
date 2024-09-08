@@ -1,0 +1,77 @@
+@import '../../scss/utils/';
+
+.hero {
+  height: 100%;
+  padding: 32px 0;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .text {
+    text-align: center;
+
+    @include tablet {
+      font-size: 24px;
+    }
+
+    @include laptop {
+      text-align: left;
+      line-height: 48px;
+    }
+
+    @include desktop {
+      font-size: 36px;
+      line-height: 64px;
+    }
+  }
+
+  @include laptop {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.img {
+  width: 350px;
+  height: auto;
+
+  @include tablet {
+    width: 550px;
+  }
+
+  @include laptop {
+    width: 500px;
+  }
+}
+
+.currencies {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  justify-items: center;
+  gap: 24px;
+
+  @include laptop {
+    padding: 0 12rem;
+  }
+
+  @include desktop {
+    padding: 0 25rem;
+  }
+
+  .item {
+    color: $primary-color;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+
+    .price {
+      color: green;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+  }
+}
