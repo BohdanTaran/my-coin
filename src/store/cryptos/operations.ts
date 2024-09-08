@@ -1,5 +1,8 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axiosInstance from '../../utils/axiosInstance';
+import axios from 'axios';
+
+axios.defaults.baseURL = import.meta.env.VITE_BASE_URL;
 
 export const getHeroCrypto = createAsyncThunk(
   'cryptos/hero',
