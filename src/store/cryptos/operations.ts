@@ -8,11 +8,7 @@ export const getHeroCrypto = createAsyncThunk(
   'cryptos/hero',
   async (_, thunkAPI) => {
     try {
-      const { data } = await axiosInstance.get<Crypto[]>('/coins/markets', {
-        params: {
-          per_page: 5,
-        },
-      });
+      const { data } = await axiosInstance.get<Crypto[]>('/coins/markets', {});
 
       return data;
     } catch (error) {

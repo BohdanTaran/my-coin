@@ -1,0 +1,61 @@
+@import '../../scss/utils/';
+
+.market {
+  color: $primary-color;
+  padding: 2rem 0;
+}
+
+.table {
+  padding-top: 2rem;
+  width: 100%;
+}
+
+.head {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid $hover-color;
+
+  span {
+    font-weight: 700;
+    font-size: 16px;
+    min-width: 20px;
+  }
+}
+
+.coin {
+  color: $secondary-color;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1rem 0;
+  background-color: $primary-color;
+  cursor: pointer;
+
+  &:nth-child(odd) {
+    opacity: 90%;
+  }
+
+  &:hover {
+    opacity: 100%;
+    background-color: $hover-color;
+    transition: 0.3s ease-in-out;
+  }
+
+  span {
+    font-family: Arial, Helvetica, sans-serif;
+    min-width: 50px;
+
+    &.high {
+      font-weight: 800;
+      color: rgb(0, 204, 0);
+    }
+
+    &.low {
+      font-weight: 800;
+      color: red;
+    }
+  }
+}

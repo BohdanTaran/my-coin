@@ -29,6 +29,10 @@ const cryptoSlice = createSlice({
       .addCase(getHeroCrypto.fulfilled, (state, { payload }) => {
         state.isLoading = false;
         state.heroCrypto = payload as unknown as Crypto[];
+        state.cryptoList = payload as unknown as Crypto[];
+
+        state.heroCrypto = state.heroCrypto.slice(0, 6);
+        state.cryptoList = state.cryptoList.slice(0, 10);
       })
       .addCase(getHeroCrypto.rejected, (state, { payload }) => {
         state.isLoading = false;
