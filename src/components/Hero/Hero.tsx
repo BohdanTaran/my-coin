@@ -1,6 +1,7 @@
 import { useSelector } from 'react-redux';
 import styles from './Hero.module.scss';
 import { selectCryptoForHero } from '../../store/cryptos/selectors';
+import heroImg from '../../../public/hero-img.png';
 
 const Hero = () => {
   const currencies = useSelector(selectCryptoForHero);
@@ -12,11 +13,7 @@ const Hero = () => {
           <h1>TRACK AND TRADE</h1>
           <h2>CRYPTO CURRENCIES</h2>
         </div>
-        <img
-          className={styles.img}
-          src="../../../public/hero-img.png"
-          alt="hero-img"
-        />
+        <img className={styles.img} src={heroImg} alt="hero-img" />
       </div>
       <div className={styles.currencies}>
         {currencies.map((crypto) => (
