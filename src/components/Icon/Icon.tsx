@@ -17,7 +17,7 @@ const Icon: React.FC<IconProps> = ({
 }) => {
   return (
     <svg width={width} height={height} className={className} onClick={onClick}>
-      <use href={sprite + `#${icon}`} />
+      <use href={sprite + `#icon-${icon}`} />
     </svg>
   );
 };
