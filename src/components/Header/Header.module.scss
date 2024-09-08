@@ -1,0 +1,68 @@
+@import '../../scss/utils/';
+
+.header {
+  position: sticky;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(10px);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.icon {
+  cursor: pointer;
+  fill: white;
+}
+
+.menu {
+  @include tablet {
+    display: none;
+  }
+}
+
+nav {
+  &.navigation {
+    display: none;
+  }
+
+  @include tablet {
+    &.navigation {
+      width: 50%;
+      display: block;
+    }
+
+    ul {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+    }
+
+    li {
+      padding: 5px;
+      cursor: pointer;
+      &:hover {
+        color: $secondary-color;
+        background-color: $hover-color;
+        transition: 0.3s ease-in-out;
+        border-radius: 10px;
+      }
+    }
+  }
+}
+
+.social {
+  display: none;
+
+  @include tablet {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+}
