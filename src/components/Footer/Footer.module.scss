@@ -1,0 +1,25 @@
+@import '../../scss/utils/';
+
+.footer {
+  min-height: 200px;
+  background: linear-gradient(180deg, $secondary-color 5%, $primary-color 95%);
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+
+  .icon {
+    cursor: pointer;
+    fill: $primary-color;
+    min-width: 3rem;
+    min-height: 3rem;
+    filter: drop-shadow($secondary-color 0.4rem 0.4rem 0.3rem);
+    transition: transform 0.2s ease-in-out;
+
+    &:hover {
+      transform: rotate(10deg);
+    }
+  }
+}
