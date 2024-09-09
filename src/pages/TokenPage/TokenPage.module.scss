@@ -12,6 +12,7 @@
     max-width: 100px;
     height: auto;
     border-right: 2px solid $primary-color;
+    padding-right: 12px;
   }
 
   .info {
@@ -29,6 +30,31 @@
       .price {
         color: rgb(0, 168, 0);
       }
+    }
+  }
+}
+
+.btns {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+
+  .btn {
+    cursor: pointer;
+    padding: 6px 8px;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    background-color: $bg-color;
+    color: $secondary-color;
+
+    &:hover {
+      background-color: $hover-color;
+      transition: 0.2s ease-in-out;
+    }
+
+    &.active {
+      background-color: $primary-color;
     }
   }
 }

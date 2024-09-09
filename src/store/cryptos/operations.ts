@@ -5,7 +5,7 @@ import axios from 'axios';
 axios.defaults.baseURL = import.meta.env.VITE_BASE_URL;
 
 export const getCryptos = createAsyncThunk(
-  'cryptos/hero',
+  'cryptos/cryptos',
   async (_, thunkAPI) => {
     try {
       const { data } = await axiosInstance.get<Crypto[]>('/coins/markets', {});

@@ -16,6 +16,7 @@
 }
 
 .logo {
+  color: $secondary-color;
   font-size: 24px;
   font-weight: 800;
 }
@@ -49,7 +50,8 @@ nav {
       gap: 24px;
     }
 
-    li {
+    .li {
+      color: $secondary-color;
       font-size: 16px;
       padding: 5px;
       cursor: pointer;

@@ -9,6 +9,8 @@ import { Route, Routes } from 'react-router-dom';
 import Home from '../pages/Home/Home';
 import TokenPage from '../pages/TokenPage/TokenPage';
 
+import styles from './App.module.scss';
+
 function App() {
   const dispatch = useDispatch<AppDispatch>();
 
@@ -17,15 +19,17 @@ function App() {
   }, [dispatch]);
 
   return (
-    <>
+    <div className={styles.appContainer}>
       <Menu />
       <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/tokens/:id" element={<TokenPage />} />
-      </Routes>
+      <main className={styles.mainContent}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/tokens/:id" element={<TokenPage />} />
+        </Routes>
+      </main>
       <Footer />
-    </>
+    </div>
   );
 }
 
