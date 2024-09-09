@@ -5,6 +5,7 @@ import styles from './Market.module.scss';
 import { selectCryptoList } from '../../store/cryptos/selectors';
 import { Pagination } from 'antd';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Market = () => {
   const currencies = useSelector(selectCryptoList);
@@ -32,7 +33,11 @@ const Market = () => {
             <span>Market Cap</span>
           </div>
           {currentCoins.map((crypto) => (
-            <div key={crypto.id} className={styles.coin}>
+            <Link
+              key={crypto.id}
+              to={`/tokens/${crypto.id}`}
+              className={styles.coin}
+            >
               <img width={35} src={crypto.image} alt={crypto.name} />
               <span>{crypto.current_price.toFixed(2)}$</span>
               <span
@@ -41,7 +46,7 @@ const Market = () => {
                 {crypto.price_change_percentage_24h.toFixed(3)}%
               </span>
               <span>{crypto.market_cap}$</span>
-            </div>
+            </Link>
           ))}
         </div>
         <Pagination

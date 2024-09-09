@@ -14,16 +14,7 @@ html,
 body {
   min-height: 100vh;
   font-family: $primary-font;
-  background: linear-gradient(180deg, $primary-color 5%, $secondary-color 15%);
   color: $secondary-color;
-
-  @include desktop {
-    background: linear-gradient(
-      180deg,
-      $primary-color 5%,
-      $secondary-color 25%
-    );
-  }
 }
 
 a {
