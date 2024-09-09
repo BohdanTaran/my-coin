@@ -3,6 +3,10 @@
 .market {
   color: $primary-color;
   padding: 2rem 0;
+
+  h1 {
+    text-transform: uppercase;
+  }
 }
 
 .table {

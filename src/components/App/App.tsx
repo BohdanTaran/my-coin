@@ -6,6 +6,9 @@ import { useEffect } from 'react';
 import { getCryptos } from '../../store/cryptos/operations';
 import { AppDispatch } from '../../store/store';
 import Market from '../Market/Market';
+import ChooseUs from '../ChooseUs/ChooseUs';
+import Join from '../Join/Join';
+import Footer from '../Footer/Footer';
 
 function App() {
   const dispatch = useDispatch<AppDispatch>();
@@ -20,6 +23,9 @@ function App() {
       <Header />
       <Hero />
       <Market />
+      <ChooseUs />
+      <Join />
+      <Footer />
     </>
   );
 }

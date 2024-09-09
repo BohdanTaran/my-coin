@@ -1,4 +1,4 @@
-@import '../utils/variables.scss';
+@import '../utils/';
 
 #root {
   width: 100%;
@@ -14,7 +14,7 @@ html,
 body {
   min-height: 100vh;
   font-family: $primary-font;
-  background: linear-gradient(180deg, $primary-color 5%, $secondary-color 40%);
+  background: linear-gradient(180deg, $primary-color 5%, $secondary-color 23%);
   color: $secondary-color;
 }
 

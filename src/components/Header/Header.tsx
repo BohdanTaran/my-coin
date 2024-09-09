@@ -11,16 +11,16 @@ const data = [
     link: '/home',
   },
   {
-    name: 'About Us',
-    link: '/home',
+    name: 'Market',
+    link: '/market',
   },
   {
-    name: 'Carrier',
-    link: '/home',
+    name: 'Choose Us',
+    link: '/choose-us',
   },
   {
-    name: 'Contacts',
-    link: '/home',
+    name: 'Join',
+    link: '/join',
   },
 ];
 
