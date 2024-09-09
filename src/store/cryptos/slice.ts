@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { Crypto } from '../../types/crypto.types';
-import { getHeroCrypto } from './operations';
+import { getCryptos } from './operations';
 
 interface StateProps {
   heroCrypto: Crypto[];
@@ -23,14 +23,17 @@ const cryptoSlice = createSlice({
 
   extraReducers: (builder) => {
     builder
-      .addCase(getHeroCrypto.pending, (state) => {
+      .addCase(getCryptos.pending, (state) => {
         state.isLoading = true;
       })
-      .addCase(getHeroCrypto.fulfilled, (state, { payload }) => {
+      .addCase(getCryptos.fulfilled, (state, { payload }) => {
         state.isLoading = false;
         state.heroCrypto = payload as unknown as Crypto[];
+        state.cryptoList = payload as unknown as Crypto[];
+
+        state.heroCrypto = state.heroCrypto.slice(0, 6);
       })
-      .addCase(getHeroCrypto.rejected, (state, { payload }) => {
+      .addCase(getCryptos.rejected, (state, { payload }) => {
         state.isLoading = false;
         state.error = payload as string;
       });

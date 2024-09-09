@@ -1,9 +1,17 @@
 @import '@/scss/utils';
 
 .layout {
-  min-height: 100vh;
+  min-height: 100%;
 
   @include mobile {
     padding: 0 16px;
+  }
+
+  @include laptop {
+    padding: 0 8rem;
+  }
+
+  @include desktop {
+    padding: 0 15rem;
   }
 }
