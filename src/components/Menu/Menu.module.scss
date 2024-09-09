@@ -47,7 +47,8 @@ nav {
       text-transform: uppercase;
     }
 
-    li {
+    .li {
+      color: $primary-color;
       padding: 5px;
       cursor: pointer;
       &:hover {

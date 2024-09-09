@@ -4,23 +4,24 @@ import Layout from '../Layout/Layout';
 import styles from './Menu.module.scss';
 import { selectOpenState } from '../../store/menu/selectors';
 import { toggleMenu } from '../../store/menu/slice';
+import { Link } from 'react-router-dom';
 
 const data = [
   {
     name: 'Home',
-    link: '/home',
+    link: '/',
   },
   {
-    name: 'About Us',
-    link: '/home',
+    name: 'Market',
+    link: '/market',
   },
   {
-    name: 'Carrier',
-    link: '/home',
+    name: 'Choose Us',
+    link: '/choose-us',
   },
   {
-    name: 'Contacts',
-    link: '/home',
+    name: 'Join',
+    link: '/join',
   },
 ];
 
@@ -44,7 +45,14 @@ const Menu = () => {
           <nav className={styles.navigation}>
             <ul>
               {data.map((i, index) => (
-                <li key={index}>{i.name}</li>
+                <Link
+                  to={`${i.link}`}
+                  key={index}
+                  className={styles.li}
+                  onClick={handleMenu}
+                >
+                  {i.name}
+                </Link>
               ))}
             </ul>
           </nav>
