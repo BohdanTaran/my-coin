@@ -33,7 +33,7 @@ const Header = () => {
   };
 
   return (
-    <Layout>
+    <Layout className={styles.layout}>
       <div className={styles.header}>
         <span className={styles.logo}>MY COIN</span>
         <nav className={styles.navigation}>

@@ -1,17 +1,15 @@
-import { ReactNode } from "react"
+import { ReactNode } from 'react';
+import cn from 'classnames';
 
-import styles from './Layout.module.scss'
+import styles from './Layout.module.scss';
 
 interface Props {
-    children: ReactNode;
+  children: ReactNode;
+  className?: string;
 }
 
-const Layout = ({ children }: Props) => {
-  return (
-    <div className={styles.layout}>
-        {children}
-    </div>
-  )
-}
+const Layout = ({ children, className }: Props) => {
+  return <div className={cn(styles.layout, className)}>{children}</div>;
+};
 
-export default Layout
+export default Layout;
