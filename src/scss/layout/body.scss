@@ -1,10 +1,5 @@
 @import '../utils/';
 
-#root {
-  width: 100%;
-  min-height: 100vh;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -12,18 +7,9 @@
 
 html,
 body {
-  min-height: 100vh;
+  height: 100%;
   font-family: $primary-font;
-  background: linear-gradient(180deg, $primary-color 5%, $secondary-color 15%);
   color: $secondary-color;
-
-  @include desktop {
-    background: linear-gradient(
-      180deg,
-      $primary-color 5%,
-      $secondary-color 25%
-    );
-  }
 }
 
 a {

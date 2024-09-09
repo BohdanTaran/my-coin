@@ -1,0 +1,60 @@
+@import '../../scss/utils/';
+
+.layout {
+  margin: 2rem 0;
+}
+
+.content {
+  color: $primary-color;
+  display: flex;
+
+  img {
+    max-width: 100px;
+    height: auto;
+    border-right: 2px solid $primary-color;
+    padding-right: 12px;
+  }
+
+  .info {
+    display: flex;
+
+    .text {
+      line-height: 1.5rem;
+      font-family: sans-serif;
+      font-weight: 600;
+      display: flex;
+      flex-direction: column;
+      margin-left: 1rem;
+      text-transform: uppercase;
+
+      .price {
+        color: rgb(0, 168, 0);
+      }
+    }
+  }
+}
+
+.btns {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+
+  .btn {
+    cursor: pointer;
+    padding: 6px 8px;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    background-color: $bg-color;
+    color: $secondary-color;
+
+    &:hover {
+      background-color: $hover-color;
+      transition: 0.2s ease-in-out;
+    }
+
+    &.active {
+      background-color: $primary-color;
+    }
+  }
+}

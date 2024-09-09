@@ -4,11 +4,12 @@ import styles from './Header.module.scss';
 import { selectOpenState } from '../../store/menu/selectors';
 import { toggleMenu } from '../../store/menu/slice';
 import Layout from '../Layout/Layout';
+import { Link } from 'react-router-dom';
 
 const data = [
   {
     name: 'Home',
-    link: '/home',
+    link: '/',
   },
   {
     name: 'Market',
@@ -35,11 +36,15 @@ const Header = () => {
   return (
     <Layout className={styles.layout}>
       <div className={styles.header}>
-        <span className={styles.logo}>MY COIN</span>
+        <Link to={'/'} className={styles.logo}>
+          MY COIN
+        </Link>
         <nav className={styles.navigation}>
           <ul>
             {data.map((i, index) => (
-              <li key={index}>{i.name}</li>
+              <Link to={`${i.link}`} key={index} className={styles.li}>
+                {i.name}
+              </Link>
             ))}
           </ul>
         </nav>
